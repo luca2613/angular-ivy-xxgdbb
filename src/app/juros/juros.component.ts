@@ -22,17 +22,4 @@ export class JurosComponent implements OnInit {
   getJuros() {
     return this.vp * (1 + (this.j / 100) * this.n);
   }
-
-  getJurosComposto() {
-    for (let i = 1; i <= this.n; i++) {
-      let jurosSimples = this.vp * (1 + (this.j / 100) * this.n);
-      let jurosComposto = this.vp * (1 + this.j / 100) ** i;
-      this.lista.push({
-        simples: jurosSimples,
-        composto: jurosComposto,
-        periodo: i,
-      });
-    }
-    return this.lista;
-  }
 }

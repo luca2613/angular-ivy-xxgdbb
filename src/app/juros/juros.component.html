@@ -7,17 +7,3 @@
 <input type="number" step="1" [(ngModel)]="n" />
 <h3>Valor futuro</h3>
 <h4>{{ getJuros() }}</h4>
-
-<h2>Juros compostos</h2>
-<table border="1">
-  <tr>
-    <th>N</th>
-    <th>Juros simples</th>
-    <th>Juros Composto</th>
-  </tr>
-  <tr *ngFor="let item of getJurosComposto()">
-    <td>{{ item.periodo }}</td>
-    <td>{{ item.simples }}</td>
-    <td>{{ item.composto }}</td>
-  </tr>
-</table>

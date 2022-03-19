@@ -1,0 +1,19 @@
+<div>Valor presente:</div>
+<input type="number" step="0.01" [(ngModel)]="vp" />
+<div>Juros (en%):</div>
+<input type="number" step="0.01" [(ngModel)]="j" />
+<div>Periodo (em meses)</div>
+<input type="number" step="1" [(ngModel)]="n" />
+<h2>Juros compostos</h2>
+<table border="1">
+  <tr>
+    <th>N</th>
+    <th>Juros simples</th>
+    <th>Juros Composto</th>
+  </tr>
+  <tr *ngFor="let item of getJurosComposto()">
+    <td>{{ item.periodo }}</td>
+    <td>{{ item.simples }}</td>
+    <td>{{ item.composto }}</td>
+  </tr>
+</table>
